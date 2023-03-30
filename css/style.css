@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+/* font-family: 'Lato', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/* font-family: 'Righteous', cursive; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+:root {
+    --primary: #2d3142;
+    --secondary: #4f5d75;
+    --orange: #ef8354;
+    --white: #fff;
+    --grey: #bfc0c0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    width: 100%;
+    height: 15%;
+}
+
+header nav {
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav a {
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white);
+}
+
+header nav a h1::after {
+    content: '«';
+    position: absolute;
+    left: 0%;
+    bottom: 25%;
+    color: var(--orange);
+    transform: translateX(-100%);
+}
+
+header nav a h1::before {
+    content: '»';
+    position: absolute;
+    right: 0%;
+    bottom: 25%;
+    color: var(--orange);
+    transform: translateX(100%);
+}
+
+header nav ul {
+    height: 100%;
+    text-transform: uppercase;
+    list-style: none;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+header nav ul li {
+    padding: 5px;
+    border-radius: 15px;
+}
+
+header nav ul li:hover {
+    background-color: var(--orange);
+}
+
+header nav button {
+    background-color: black;
+    color: var(--white);
+    text-transform: uppercase;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1%;
+}
+
+main {
+    width: 100%;
+}
+
+main header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main header table thead,
+tfoot {
+    background-color: var(--secondary);
+}
+
+main header table {
+    font-family: sans-serif;
+    font-size: 0.7rem;
+    color: var(--white);
+}
+
+main header table caption {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+}
+
+main header table tbody {
+    color: black;
+}
+
+main header table th,
+td {
+    padding: 5px;
+    border: 1px solid black
+}
+
+main {
+    width: 100%;
+}
+
+main aside {
+    width: 100%;
+    height: 80vh;
+}
+
+main section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+main section h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+main aside section article {
+    position: relative;
+    width: 80%;
+    height: 20%;
+    margin-top: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+main aside section article:nth-child(2n) {
+    background-color: var(--grey);
+}
+
+main aside section article h3 {
+    position: absolute;
+    left: 35%;
+    margin-top: 2%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+main aside section article img {
+    height: 100%;
+    width: 30%;
+    object-fit: cover;
+}
+
+main aside section article p {
+    position: absolute;
+    max-width: calc(100% - 40%);
+    max-height: calc(100% - 20%);
+    font-size: calc(18px - 50%);
+    top: 20%;
+    left: 35%;
+    margin-top: 5px;
+}
+
+.parallax {
+    background-image: url("../img/img-09.jpg");
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 20%;
+    margin-top: 5%;
+}
+
+main footer {
+    width: 100%;
+    margin-top: 40%;
+}
+
+main footer section {
+    width: 100%;
+}
+
+main footer section article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 200px;
+    box-shadow: 5px 5px 15px 5px #000000;
+    margin-top: 10%;
+}
+
+main footer section article img {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+}
+
+main footer section article h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+main footer section article p {
+    font-size: calc(18px - 30%);
+    text-align: center;
+}
